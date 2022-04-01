@@ -1,0 +1,23 @@
+.div0
+{
+    height: 400px;
+    width: 500px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    border: 1px solid black;
+}
+.div1 
+{
+    height: 400px;
+    width: 500px;
+    position: relative;
+    left: 700px;
+    top: -353px;
+    border: 1px solid black;
+}
+.mousebox
+{
+    position: fixed;
+    border: 1px solid black;
+}
