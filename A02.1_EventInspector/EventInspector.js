@@ -22,7 +22,7 @@ var EventInspector;
         let position = document.querySelector(".mousebox");
         /* "innerHTML"-Eigenschaft: Abruf bzw. Festlegung des im Elemtn enthaltene HTML */
         /* MouseEvent-clientX und -clientY: Ausgabe der x- und y-Koordinaten des Mauszeigers */
-        position.innerHTML = "x-Coordinate: " + _event.clientX + "px" + " ,y-Coordinate: " + _event.clientY + "px" + " & target: " + _event.target;
+        position.innerHTML = "x-Coordinate: " + _event.clientX + "px," + " y-Coordinate: " + _event.clientY + "px" + " & target: " + _event.target;
         position.style.left = _event.clientX + "px";
         position.style.top = _event.clientY + "px";
     }
@@ -34,4 +34,4 @@ var EventInspector;
         console.log(_event.eventPhase);
     }
 })(EventInspector || (EventInspector = {}));
-//# sourceMappingURL=Eventinspector.js.map
+//# sourceMappingURL=EventInspector.js.map
