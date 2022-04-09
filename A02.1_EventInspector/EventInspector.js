@@ -32,6 +32,7 @@ var EventInspector;
         console.log(_event.target);
         console.log(_event.currentTarget);
         console.log(_event.eventPhase);
+        console.log(_event);
     }
 })(EventInspector || (EventInspector = {}));
 //# sourceMappingURL=EventInspector.js.map
