@@ -1,0 +1,63 @@
+fieldset
+{
+    width: 300px;
+}
+
+label
+{
+    width: 150px;
+    display: inline-block;
+}
+
+.card
+{
+    border: 1px solid black;
+}
+
+.card span 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 25px;
+    background-color: red;
+}
+
+#fontArialLabel
+{
+    font-family: 'Arial';
+}
+
+#fontTimesNewRomanLabel
+{
+    font-family: 'Times New Roman';
+}
+
+#fontCourierLabel
+{
+    font-family: 'Courier';
+}
+
+#playGround
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    gap: 10px;
+    border: 10px solid black;
+    margin: auto;
+    padding: 10px;
+}
+
+.hidden
+{
+    display: none !important;
+}
+
+.invisible 
+{
+    visibility: hidden;
+}
