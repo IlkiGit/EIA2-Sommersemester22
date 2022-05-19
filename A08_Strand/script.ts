@@ -21,8 +21,8 @@ namespace beach
         drawGull(500, 300);
         drawShip(300, 500);
         drawShip(100, 400);
-        drawBall(100, 1000);
-        drawBall(400, 900);
+        drawHuman(0, 700);
+        drawHuman(300, 700);
     }
 
     /* Himmel */
@@ -189,22 +189,52 @@ namespace beach
         crc2.closePath();
     }
 
-    function drawBall(_x: number, _y: number): void
+    /* Mensch */
+
+    function drawHuman(_x: number, _y: number): void
     {
+        crc2.save();
+
         let x: number = Math.floor(Math.random() * 100) + _x;
         let y: number = Math.floor(Math.random() * 250) + _y;
-        let r: number = 50;
-        
 
-        let gradient: CanvasGradient = crc2.createRadialGradient(x, y, 0, x, y, r);
-        gradient.addColorStop(1, "#FF0000");
-        gradient.addColorStop(0, "#FF00FF");
+        crc2.translate(x, y);
+
+        /* Kopf */
+        
+        crc2.beginPath();
+        crc2.fillStyle = "#000000";
+        crc2.arc(200, 50, 50, 0, Math.PI * 2, true); 
+        crc2.fill();
+
+        /* Körper */
 
         crc2.beginPath();
-        crc2.fillStyle = gradient;
-        crc2.arc(x, y, r, 0, 2*Math.PI);
-        crc2.closePath();
-        
-        crc2.fill();
+        crc2.moveTo(200, 100);
+        crc2.lineTo(200, 180);
+        crc2.strokeStyle = "#000000";
+        crc2.stroke();
+
+        /* Arme */
+
+        crc2.beginPath();
+        crc2.strokeStyle = "#000000"; 
+        crc2.moveTo(200, 100);
+        crc2.lineTo(150, 130);
+        crc2.moveTo(200, 100);
+        crc2.lineTo(250, 130);
+        crc2.stroke();
+
+        /* Beine */
+
+        crc2.beginPath();
+        crc2.strokeStyle = "#000000";
+        crc2.moveTo(200, 180);
+        crc2.lineTo(150, 280);
+        crc2.moveTo(200, 180);
+        crc2.lineTo(250, 280);
+        crc2.stroke();
+
+        crc2.restore();
     }
 } 
