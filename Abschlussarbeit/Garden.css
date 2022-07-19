@@ -66,6 +66,7 @@ button {
     height: 50px;
     /* background-color: rgb(172, 209, 71); */
     border: 0;
+    cursor: pointer;
 }
 
 #Water {
