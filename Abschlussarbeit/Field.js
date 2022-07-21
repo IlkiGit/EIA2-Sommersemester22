@@ -2,24 +2,24 @@
 var FieldSimulator;
 (function (FieldSimulator) {
     class Field {
+        // Field gets the objects and methods of the Plant- and timeBased-Classes
         plantType = new FieldSimulator.Plant0();
         waterLevel = new FieldSimulator.Water();
         fertilizerLevel = new FieldSimulator.Fertilizer();
-        pestsLevel = new FieldSimulator.Pests();
+        pestsLevel = new FieldSimulator.Pests(); //pestsLevel >= 4: plant dies
         growthLevel = new FieldSimulator.Growth();
-        interval;
         constructor() {
             this.waterLevel.value = 50;
             this.fertilizerLevel.value = 50;
         }
         plant(_plantType) {
-            if (this.plantType.name == "Plant0") {
+            if (this.plantType.name == "Plant0") { //Plant0 means "empty field"
                 this.reset();
                 this.plantType = _plantType;
             }
         }
         water() {
-            if (this.plantType.name != "Plant0" && this.growthLevel.value != 200) {
+            if (this.plantType.name != "Plant0" && this.growthLevel.value != 200) { // growthLevel.value = 200 means "dead"
                 this.waterLevel.increase();
             }
         }
@@ -37,7 +37,7 @@ var FieldSimulator;
             }
         }
         harvest() {
-            if (this.growthLevel.value == 100) {
+            if (this.growthLevel.value == 100) { // growthLevel.value == 100 means "ripe"
                 FieldSimulator.market.sell(this.plantType.name);
             }
             this.reset();

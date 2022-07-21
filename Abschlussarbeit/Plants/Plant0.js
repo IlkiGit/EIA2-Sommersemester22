@@ -2,7 +2,7 @@
 var FieldSimulator;
 (function (FieldSimulator) {
     class Plant0 extends FieldSimulator.Plant {
-        name = "Plant0";
+        name = "Plant0"; // empty field
         waterDrainage = 0;
         fertilizerDemand = 0;
         pestsProbability = 0;

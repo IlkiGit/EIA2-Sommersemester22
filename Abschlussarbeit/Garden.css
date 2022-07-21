@@ -75,7 +75,7 @@ button {
     width: 100px;
     place-self: center;
     /* background-color: rgb(104, 157, 255); */
-    background-image: url(../EIA_2_Endabgabe/img/Water.png);
+    background-image: url(img/Water.png);
     background-size: 50px;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,7 +89,7 @@ button {
     height: 100px;
     width: 100px;
     place-self: center;
-    background-image: url(../EIA_2_Endabgabe/img/Fertilizer.png);
+    background-image: url(img/Fertilizer.png);
     background-size: 80px;
     background-repeat: no-repeat;
     background-position: center;
@@ -104,7 +104,7 @@ button {
     height: 100px;
     width: 100px;
     place-self: center;
-    background-image: url(../EIA_2_Endabgabe/img/Pesticide.jpg);
+    background-image: url(img/Pesticide.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -118,7 +118,7 @@ button {
     height: 100px;
     width: 100px;
     place-self: center;
-    background-image: url(../EIA_2_Endabgabe/img/Harvest.png);
+    background-image: url(img/Harvest.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -139,7 +139,7 @@ button {
 
 .grow {
     background-color: green;
-    background-image: url(../EIA_2_Endabgabe/img/plant_1.png);
+    background-image: url(img/plant_1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -154,7 +154,7 @@ button {
 
 .dead {
     color: white;
-    background-image: url(../EIA_2_Endabgabe/img/Empty.png);
+    background-image: url(img/Empty.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;

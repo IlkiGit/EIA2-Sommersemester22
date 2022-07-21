@@ -3,10 +3,10 @@ var FieldSimulator;
 (function (FieldSimulator) {
     class Pests extends FieldSimulator.TimeBased {
         decrease() {
-            this.value = this.value = 0;
+            this.value = 0;
         }
         increase(_plantType) {
-            if (Math.random() <= _plantType.pestsProbability / 100 && this.value < 1) {
+            if (Math.random() <= _plantType.pestsProbability / 100 && this.value < 1) { // Wahrscheinlichkeit eines Befalls
                 this.value = 1;
             }
             if (this.value >= 1) {

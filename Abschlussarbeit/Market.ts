@@ -1,6 +1,7 @@
 namespace FieldSimulator {
 
     export class Market {
+
         money: number;
         buyPrice: number[] = [30, 30, 50, 100, 150, 150, 250];
         sellPrice: number[] = [100, 200, 300, 350, 750];
@@ -46,7 +47,7 @@ namespace FieldSimulator {
         }
 
         fluctuate(_difficulty: string): void {
-            this.fertilizerPrice.innerHTML = `${this.buyPrice[0]}$`;
+            this.fertilizerPrice.innerHTML = `${this.buyPrice[0]}$`; // `${expression}`: template strings
             this.pesticedePrice.innerHTML = `${this.buyPrice[1]}$`;
             this.plant1Buy.innerHTML = `${this.buyPrice[2]}$`;
             this.plant2Buy.innerHTML = `${this.buyPrice[3]}$`;
@@ -58,7 +59,11 @@ namespace FieldSimulator {
             this.plant3Sell.innerHTML = `${this.sellPrice[2]}$`;
             this.plant4Sell.innerHTML = `${this.sellPrice[3]}$`;
             this.plant5Sell.innerHTML = `${this.sellPrice[4]}$`;
+            
             switch (_difficulty) {
+
+                // map(x =>(arrow function)): Method to create a new array with new results
+
                 case "Easy": this.buyPrice = this.buyPrice.map(x => Math.floor(Math.random() * (1.01 * x - 0.99 * x + 1) + 0.99 * x));
                              this.sellPrice = this.sellPrice.map(x => Math.floor(Math.random() * (1.015 * x - 0.99 * x + 1) + 0.99 * x)); break;
                 case "Medium": this.buyPrice = this.buyPrice.map(x => Math.floor(Math.random() * (1.01 * x - 0.99 * x + 1) + 0.99 * x));
